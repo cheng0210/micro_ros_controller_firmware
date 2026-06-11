@@ -18,7 +18,7 @@ manifest:
     - name: micro_ros_zephyr_module
       remote: micro-ROS
       repo-path: micro_ros_zephyr_module
-      revision: jazzy
+      revision: jazzy_posix_fix
       path: micro_ros_zephyr_module
 
   self:

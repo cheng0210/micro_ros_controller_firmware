@@ -55,7 +55,7 @@ The current hardware setup includes the following components.
 
 | Component | Quantity | Purpose |
 |---|---:|---|
-| M0601 Direct-Drive Hub Motor for AGV, Right Orientation, Integrated FOC Servo | 1 | Wheel actuation |
+| M0601 Direct-Drive Hub Motor for AGV, Right Orientation, Integrated FOC Servo | 2 | Wheel actuation |
 | M0601 Direct-Drive Hub Motor for AGV, Left Orientation, Integrated FOC Servo | 2 | Wheel actuation |
 | DDSM Driver HAT (A) | 1 | Motor driver board for DDSM series hub motors |
 | All-metal Compact UGV Suspension (A) | 4 | Mechanical suspension for the mobile robot platform |
@@ -190,7 +190,7 @@ flowchart TB
     SPLIT -. "Future High-Current Motor Power" .-> CUSTOM
 
     SPLIT -->|"Input Power"| BUCK5
-    BUCK5 -->|"5 V Logic Power"| JETSON
+    BUCK5 -->|"12 V Logic Power"| JETSON
     BUCK5 -->|"5 V Input / Logic Power"| LDO33
     LDO33 -->|"3.3 V Logic Power"| NUCLEO
     LDO33 -->|"3.3 V Sensor Power"| IMU
@@ -301,8 +301,8 @@ flowchart TB
         |             |                                                                        |
         |             +-----------------------------> DC-DC Buck Regulator                     |
         |                                               |                                      |
-        |                                               +--> 5 V logic rail                    |
-        |                                               |    - Jetson, if powered from robot   |
+        |                                               +--> 12 V logic rail                   |
+        |                                               |    - Jetson                          |
         |                                               |                                      |
         |                                               +--> 3.3 V rail                        |
         |                                                    - Nucleo-H723                     |

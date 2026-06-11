@@ -1,8 +1,8 @@
 {
   "projects": {
-    "nucleo_h723_microros": {
-      "rel_path": "apps/nucleo_h723_microros",
-      "name": "nucleo_h723_microros",
+    "h723_rover_controller": {
+      "rel_path": "apps/h723_rover_controller",
+      "name": "h723_rover_controller",
       "buildConfigs": {
         "build/nucleo_h723zg": {
           "board": "nucleo_h723zg",
